@@ -1,0 +1,66 @@
+body {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  justify-content: center;
+  align-items: center;
+
+  background-color: #f7f6c75d;
+}
+
+label {
+  margin-bottom: 60px;
+  box-shadow: 0px 0px 35px -5px rgba(84, 185, 247, 1);
+}
+
+.breed-card {
+  display: flex;
+  max-width: 800px;
+  border-radius: 15px;
+  /* border: 1px solid blue; */
+
+  box-shadow: 0px 0px 35px -5px rgba(84, 185, 247, 1);
+}
+
+img {
+  display: block;
+  margin-right: 30px;
+  border-radius: 15px;
+}
+
+.loader {
+  display: block;
+  position: relative;
+  height: 12px;
+  width: 50%;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.loader::after {
+  content: '';
+  width: 40%;
+  height: 100%;
+  background: #569ef6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  animation: animloader 2s linear infinite;
+}
+
+@keyframes animloader {
+  0% {
+    left: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    left: 100%;
+    transform: translateX(0%);
+  }
+}
+
+.is-hidden {
+  display: none;
+}
